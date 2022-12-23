@@ -15,9 +15,9 @@ function mod:init()
 	
 end
 
-    modApi:addWeaponDrop("DEMO_PrimeSkill")
-    modApi:addWeaponDrop("DEMO_RangedSkill")
-    modApi:addWeaponDrop("DEMO_BruteSkill")
+    modApi:addWeaponDrop("TT_BigBlaster")
+    modApi:addWeaponDrop("TT_GroupLoader")
+    modApi:addWeaponDrop("TT_SiloDrop")
 
 function mod:load(options, version)
 	modApi:addSquad(
