@@ -246,7 +246,7 @@ function TT_Silo_Showcase_Tip:GetSkillEffect(p1,p2)
 	ret:AddBounce(p2,5)
 	local launch = SpaceDamage(Point(2,0), self.Damage)
 	launch.sAnimation = "ExploArt2"
-	ret:AddArtillery(p2, launch, "effects/shotup_tricrack.png")
+	ret:AddArtillery(p2, launch, "effects/shotup_tricrack.png", FULL_DELAY)
 	for dir = 0, 3 do
 		local damagepush = SpaceDamage(Point(2,0) + DIR_VECTORS[dir], 0, dir)
 		damagepush.sAnimation = "airpush_".. dir
@@ -327,7 +327,7 @@ function TT_SiloDrop:GetFinalEffect(p1, p2, p3)
 	if Board:IsValid(p3) then
 		local launch = SpaceDamage(p3, self.Damage)
 		launch.sAnimation = "ExploArt2"
-		ret:AddArtillery(p2, launch, "effects/shotup_tricrack.png")
+		ret:AddArtillery(p2, launch, "effects/shotup_tricrack.png", FULL_DELAY)
 		for dir = 0, 3 do
 			local damagepush = SpaceDamage(p3 + DIR_VECTORS[dir], 0, dir)
 			damagepush.sAnimation = "airpush_".. dir
